@@ -26,6 +26,7 @@ def alto_parse(alto, **kargs):
     namespace = {'alto-1': 'http://schema.ccs-gmbh.com/ALTO',
                  'alto-2': 'http://www.loc.gov/standards/alto/ns-v2#',
                  'alto-3': 'http://www.loc.gov/standards/alto/ns-v3#',
+                 'alto-3-alt' : 'http://www.loc.gov/standards/alto/v3/alto.xsd',
                  'alto-4': 'http://www.loc.gov/standards/alto/ns-v4#',
                  'alto-bnf': 'http://bibnum.bnf.fr/ns/alto_prod'}
     # Extract namespace from document root
