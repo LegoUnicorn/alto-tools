@@ -71,7 +71,6 @@ def alto_text(xml, xmlns):
 def alto_text_tofile(xml, xmlns):
     """ Extract text content from ALTO xml file to output variable """
     # Find all <TextLine> elements
-    text = ""
     for lines in xml.iterfind('.//{%s}TextLine' % xmlns):
         # New line after every <TextLine> element
         text += "\n"
