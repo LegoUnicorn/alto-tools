@@ -74,7 +74,7 @@ def alto_text_tofile(xml, xmlns):
     text = ""
     for lines in xml.iterfind('.//{%s}TextLine' % xmlns):
         # New line after every <TextLine> element
-        text += "\n\n"
+        text += "\n"
         # Find all <String> elements
         for line in lines.findall('{%s}String' % xmlns):
             # Check if there are no hyphenated words
