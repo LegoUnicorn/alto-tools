@@ -85,7 +85,7 @@ def alto_text_tofile(xml, xmlns, text):
                     text += line.attrib.get('SUBS_CONTENT') + ' '
                     if ('HypPart2' in line.attrib.get('SUBS_TYPE')):
                         pass
-            return text
+    return text
 
 
 def alto_illustrations(xml, xmlns):
