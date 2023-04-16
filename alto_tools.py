@@ -70,14 +70,11 @@ def alto_text(xml, xmlns):
 
 def alto_text_tofile(xml, xmlns):
     """ Extract text content from ALTO xml file to output variable """
-    # Ensure use of UTF-8
-    if isinstance(sys.stdout, io.TextIOWrapper) and sys.stdout.encoding != 'UTF-8':
-        sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
     # Find all <TextLine> elements
     text = ""
     for lines in xml.iterfind('.//{%s}TextLine' % xmlns):
         # New line after every <TextLine> element
-        text += "\n"
+        text += "\n\n"
         # Find all <String> elements
         for line in lines.findall('{%s}String' % xmlns):
             # Check if there are no hyphenated words
