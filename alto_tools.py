@@ -68,7 +68,7 @@ def alto_text(xml, xmlns):
                         pass
             sys.stdout.write(text)
 
-def alto_text_tofile(xml, xmlns):
+def alto_text_tofile(xml, xmlns, text):
     """ Extract text content from ALTO xml file to output variable """
     # Find all <TextLine> elements
     for lines in xml.iterfind('.//{%s}TextLine' % xmlns):
